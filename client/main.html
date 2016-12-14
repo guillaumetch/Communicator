@@ -30,25 +30,20 @@
                         <li><a href="#"><i class="icon-coeur"></i></a></li>
                     </ul>
                 </div>
-                <div class="inputChoix">
-                    <div>
-                        <p><i class="icon-intervenants"></i>Intervenant</p>{{> intervenant}}
-                    </div>
-                </div>
             </div>
 
-            <div class="contentList">
+            <div class="contentList" id="listIntervenant">
+                <div class="inputChoix">
+                    <div>
+                       {{> intervenant}}
+                    </div>
+                </div>
                 <div>
                     {{> message}}
                 </div>
             </div>
-
-            <a class="btn large" href="">Créer une conversation</a>
         </section>
-
-
-
-
+        <a class="btn large" href="">Créer une conversation</a>
     </div>
 
 
