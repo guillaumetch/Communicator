@@ -138,6 +138,10 @@ body {
   content: "\e912";
 }
 
+body {
+    font-family: 'Lato', sans-serif;
+}
+
 .btn.large {
     display: block;
     padding: 20px 10px;
@@ -148,7 +152,6 @@ body {
 }
 
 .btn {
-    font-family: 'Lato', sans-serif;
     font-size: 16px;
     text-decoration: none;
     color: #fff;
@@ -173,7 +176,6 @@ header {
     background-color: #4d4d4d;
 }
 h1 {
-    font-family: 'Lato', sans-serif;
     font-size: 20px;
     font-weight: 400;
     color: #fff;
@@ -187,6 +189,7 @@ nav {
     display: inline-block;
     position: absolute;
     height: calc( 100% - 40px );
+    z-index: 10;
 }
 
 nav ul {
@@ -269,7 +272,6 @@ nav i {
 }
 
 .inputChoix p {
-    font-family: 'Lato', sans-serif;
     font-size: 16px;
     font-weight: 900;
     color: #666666;
@@ -292,7 +294,6 @@ nav i {
 }
 
 #select_intervenants {
-    font-family: 'Lato', sans-serif;
     border: none;
     font-size: 18px;
     font-weight: 900;
@@ -314,4 +315,124 @@ nav i {
 .contentList li {
     border-top: 1px solid #ccc;
     padding: 20px 30px;
+}
+
+
+/* parti forum*/
+
+.contentForum {
+    position: absolute;
+    margin-left: 500px;
+    padding: 0 50px;
+}
+
+h3 {
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.date {
+    color: #b3b3b3;
+    font-size: 13px;
+    float: right;
+}
+
+.contentForum h2 {
+    font-size: 40px;
+    font-weight: 900;
+    color: #333333;
+    margin-top: 35px;
+}
+
+.tag li {
+    background: #d8d8da;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 5px;
+    transition-duration: .5s;
+}
+
+.tag li:hover {
+    background: #008589;
+    transition-duration: .5s;
+}
+
+.tag li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333333;
+}
+
+.signaler {
+    float: right;
+    text-decoration: none;
+    color: #999999;
+    margin-top: -25px;
+}
+
+.signaler i{
+    color: #008589;
+    float: left;
+    margin-top: 0px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 25px;
+    color: #666666;
+    margin: 25px 0;
+}
+
+.download {
+    border: 1px solid #ccc;
+    padding: 15px 10px;
+}
+
+.icon-pdf {
+    float: left;
+    font-size: 40px;
+    margin-right: 15px;
+}
+
+.download p {
+    margin: 0;
+}
+.download-icon {
+    float: right;
+    font-size: 35px;
+    text-decoration: none;
+    margin-top: -21px;
+    color: #008589;
+}
+
+.actionMessage {
+    margin: 30px 0;
+}
+
+.actionMessage li {
+    float: left;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.actionMessage li:last-child {
+    float: right;
+    border: none;
+    color: #fff !important;
+    padding: 10px 0;
+}
+
+.actionMessage a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+    text-decoration: none;
+}
+
+.actionMessage i {
+    font-size: 25px;
+    color: #008589;
+    float: left;
+    margin-right: 5px;
 }
