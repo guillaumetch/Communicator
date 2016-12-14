@@ -21,7 +21,7 @@ Template.message.helpers
                         console.log('session');
                     }
                     else{
-                        return {object: message.object, libelle: message.libelle, matiere: message.matiere, intervenant: message.intervenant};
+                        return {object: message.object, libelle: message.libelle, matiere: message.matiere, createAt: message.createAt, intervenant: message.intervenant};
                     }
 
                 }

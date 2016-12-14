@@ -1,1 +1,310 @@
 /* CSS declarations go here */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* GENERAL */
+body {
+    margin: 0;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/fonts/icomoon.eot?3fb4ls');
+  src:  url('/fonts/icomoon.eot?3fb4ls#iefix') format('embedded-opentype'),
+    url('/fonts/icomoon.ttf?3fb4ls') format('truetype'),
+    url('/fonts/icomoon.woff?3fb4ls') format('woff'),
+    url('/fonts/icomoon.svg?3fb4ls#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-deconnexion:before {
+  content: "\e900";
+}
+.icon-recherche:before {
+  content: "\e901";
+}
+.icon-coeur:before {
+  content: "\e902";
+}
+.icon-populaire:before {
+  content: "\e903";
+}
+.icon-bas:before {
+  content: "\e904";
+}
+.icon-commentaire:before {
+  content: "\e905";
+}
+.icon-dislike:before {
+  content: "\e906";
+}
+.icon-dossiers:before {
+  content: "\e907";
+}
+.icon-haut:before {
+  content: "\e908";
+}
+.icon-intervenants:before {
+  content: "\e909";
+}
+.icon-like:before {
+  content: "\e90a";
+}
+.icon-messages:before {
+  content: "\e90b";
+}
+.icon-parametres:before {
+  content: "\e90c";
+}
+.icon-pdf:before {
+  content: "\e90d";
+}
+.icon-profil:before {
+  content: "\e90e";
+}
+.icon-signaler:before {
+  content: "\e90f";
+}
+.icon-tchat:before {
+  content: "\e910";
+}
+.icon-telecharger:before {
+  content: "\e911";
+}
+.icon-matiere:before {
+  content: "\e912";
+}
+
+.btn.large {
+    display: block;
+    padding: 20px 10px;
+    position: absolute;
+    bottom: calc( 0px - 63px);
+    width: calc( 100% - 20px);
+}
+
+.btn {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background: #00a99d;
+    padding: 10px 20px;
+    margin: 0 auto;
+    display: inline;
+    text-align: center;
+    transition-duration: .5s;
+}
+
+.btn:hover {
+    background-color: #008589;
+    transition-duration: .5s;
+}
+
+
+
+/* HEADER */
+
+header {
+    background-color: #4d4d4d;
+}
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    padding: 10px 25px;
+    margin: 0;
+}
+
+/* NAVIGATION PRINCIPALE */
+nav {
+    background: #00a99d;
+    display: inline-block;
+    position: absolute;
+    height: calc( 100% - 40px );
+}
+
+nav ul {
+    margin: 0;
+}
+
+nav li {
+    padding: 21px 7px;
+    border-bottom: 1px solid #fff;
+    transition-duration: .5s;
+}
+
+nav li:hover {
+    background-color: #008589;
+    transition-duration: .5s;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav i {
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+}
+
+
+
+/* SECTION LISTE */
+
+.content {
+    margin-left: 70px;
+    max-width: 430px;
+    border-right: 1px solid #ccc;
+}
+
+.liste {
+    position: relative;
+}
+
+.navigation {
+    border-bottom: 1px solid #ccc;
+}
+
+.navigation li {
+    display: inline-block;
+    border-right: 1px solid #cccccc;
+   margin-left: -5px;
+   border-bottom: 3px solid;
+   border-bottom-color: transparent;
+}
+
+.navigation li:last-child {
+    border-right: none;
+}
+
+.navigation a {
+    text-decoration: none;
+}
+
+.navigation i {
+    color: #cccccc;
+    font-size: 30px;
+    padding: 10px 36px;
+    display: block;
+}
+
+.navigation i:hover {
+    color: #008589;
+    transition-duration: .5s;
+}
+
+.navigation li:hover {
+    border-bottom-color: #008589;
+}
+
+.inputChoix p {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    color: #666666;
+    text-transform: uppercase;
+    margin: 50px 20px 50px;
+    display: inline-block;
+}
+
+.inputChoix p:after {
+    content: "|";
+    margin-left: 20px;
+}
+
+.inputChoix i {
+    color: #cccccc;
+    font-size: 24px;
+    float: left;
+    margin-top: -3px;
+    margin-right: 5px;
+}
+
+#select_intervenants {
+    font-family: 'Lato', sans-serif;
+    border: none;
+    font-size: 18px;
+    font-weight: 900;
+    color: #1d1d1d;
+    background: #d8d8da;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.contentList {
+    max-height: 370px;
+    overflow-y: scroll;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.contentList li {
+    border-top: 1px solid #ccc;
+    padding: 20px 30px;
+}

@@ -1,17 +1,56 @@
 <head>
   <title>Communicator</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 </head>
 <body>
 <div class="container">
     <header>
-        <h1>Todo List</h1>
+        <h1>Communicator</h1>
     </header>
-    <div>
-        {{> message}}
+
+    <nav>
+        <ul>
+            <li><a href="#"><i class="icon-matiere"></i></a></li>
+            <li><a href="#"><i class="icon-messages"></i></a></li>
+            <li><a href="#"><i class="icon-profil"></i></a></li>
+            <li><a href="#"><i class="icon-tchat"></i></a></li>
+            <li><a href="#"><i class="icon-parametres"></i></a></li>
+            <li><a href="#"><i class="icon-dossiers"></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <section class="liste">
+            <div class="selection">
+                <div class="navigation">
+                    <ul>
+                        <li><a href="#"><i class="icon-intervenants"></i></a></li>
+                        <li><a href="#"><i class="icon-matiere"></i></a></li>
+                        <li><a href="#"><i class="icon-populaire"></i></a></li>
+                        <li><a href="#"><i class="icon-coeur"></i></a></li>
+                    </ul>
+                </div>
+                <div class="inputChoix">
+                    <div>
+                        <p><i class="icon-intervenants"></i>Intervenant</p>{{> intervenant}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="contentList">
+                <div>
+                    {{> message}}
+                </div>
+            </div>
+
+            <a class="btn large" href="">Créer une conversation</a>
+        </section>
+
+
+
+
     </div>
 
-    <div>
-        {{> intervenant}}
-    </div>
+
 </div>
 </body>
