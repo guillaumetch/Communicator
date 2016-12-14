@@ -14,25 +14,25 @@ if ( Meteor.isServer )
             // Populate once
             if ( !messages.find().count() )
             {
-                messages.insert( { object : "Besoin d'un cours de NodeJS", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "Javascript",intervenant: "Mr Priou"} );
+                messages.insert( { object : "Besoin d'un cours de NodeJS", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "Javascript",intervenant: "Mr Priou",like: "70"} );
 
-                messages.insert( { object : "Lorem ipsum dolor sit amet", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "UX Design",intervenant: "Mr Bassoleil"} );
+                messages.insert( { object : "Lorem ipsum dolor sit amet", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "UX Design",intervenant: "Mr Bassoleil",like: "55",favorited: true} );
 
-                messages.insert( { object : "Lorem ipsum dolor sit amet", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "UX Design",intervenant: "Mr Bassoleil"} );
+                messages.insert( { object : "Lorem ipsum dolor sit amet", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "UX Design",intervenant: "Mr Bassoleil",like: "10",favorited: true} );
 
-                messages.insert( { object : "Lorem ipsum dolor sit amet", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "PHP",intervenant: "Mr Lescouarnec"} );
+                messages.insert( { object : "Lorem ipsum dolor sit amet", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "PHP",intervenant: "Mr Lescouarnec",like: "20"} );
 
-                messages.insert( { object : "Lorem ipsum dolor sit amet", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "Organisation de l'école",intervenant: "Mr Villa Monteiro"} );
+                messages.insert( { object : "Lorem ipsum dolor sit amet", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "Organisation de l'école",intervenant: "Mr Villa Monteiro",like:"25"} );
 
-                messages.insert( { object : "Besoin d'un cours de NodeJS", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "Javascript",intervenant: "Mr Priou"} );
+                messages.insert( { object : "Besoin d'un cours de NodeJS", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "Javascript",intervenant: "Mr Priou",like: "45",favorited: true} );
 
-                messages.insert( { object : "Lorem ipsum dolor sit amet", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "UX Design",intervenant: "Mr Bassoleil"} );
+                messages.insert( { object : "Lorem ipsum dolor sit amet", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "UX Design",intervenant: "Mr Bassoleil",like: "60"} );
 
-                messages.insert( { object : "Lorem ipsum dolor sit amet", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "UX Design",intervenant: "Mr Bassoleil"} );
+                messages.insert( { object : "Lorem ipsum dolor sit amet", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "UX Design",intervenant: "Mr Bassoleil", like: "50",favorited: true} );
 
-                messages.insert( { object : "Lorem ipsum dolor sit amet", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "PHP",intervenant: "Mr Lescouarnec"} );
+                messages.insert( { object : "Lorem ipsum dolor sit amet", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "PHP",intervenant: "Mr Lescouarnec",like:"15"} );
 
-                messages.insert( { object : "Lorem ipsum dolor sit amet", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "Organisation de l'école",intervenant: "Mr Villa Monteiro"} );
+                messages.insert( { object : "Lorem ipsum dolor sit amet", libelle : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ", createAt: new Date(), matiere: "Organisation de l'école",intervenant: "Mr Villa Monteiro",like:"5"} );
             }
             if( !intervenants.find().count())
             {

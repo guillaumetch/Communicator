@@ -1,17 +1,20 @@
 <template name="message">
     <ul>
         {{#each all_messages}}
-        <li><strong>{{object}}</strong> {{libelle}} {{createAt}}</li>
+        <li><strong>{{object}}</strong> {{libelle}} {{createAt}} {{like}}</li>
         {{/each}}
     </ul>
 </template>
 
-<template name="intervenant">
-     <p><i class="icon-intervenants"></i>Intervenant</p>
+<template name="filtre">
+     <p><i class="icon-intervenants"></i>{{filtre}}</p>
+</template>
+
+<template name="select_filtre">
     <select id="select_intervenants">
         <option>Toutes</option>
-        {{#each all_intervenants}}
-        <option>{{intervenant}}</option>
+        {{#each all_filtres}}
+        <option>{{filtre}}</option>
         {{/each}}
     </select>
 </template>
