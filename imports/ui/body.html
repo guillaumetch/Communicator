@@ -1,0 +1,16 @@
+<template name="message">
+    <ul>
+        {{#each all_messages}}
+        <li><strong>{{object}}</strong> {{libelle}}</li>
+        {{/each}}
+    </ul>
+</template>
+
+<template name="intervenant">
+    <select id="select_intervenants">
+        {{#each all_intervenants}}
+        <option>{{intervenant}}</option>
+        {{/each}}
+    </select>
+</template>
+
