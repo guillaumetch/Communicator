@@ -17,7 +17,6 @@ Template.message.helpers
                 var messages_find = Session.get('messages');
                 for(var i=0;i<messages_find.length;i++)
                 {
-                    console.log('ok');
                     messages_find[i].createAt = moment(messages_find[i].createAt).format('D/MM/Y');
                 }
                 delete Session.keys['messages'];
@@ -57,8 +56,15 @@ Template.intervenant.events(
         'change':function(event, template)
         {
             var val = template.find('#select_intervenants');
-            var messages_find = messages.find({intervenant:val.value});
-            var messages_find = messages_find.fetch();
+            var messages_find = null;
+            if( val.value === 'Toutes')
+            {
+                messages_find = messages.find().fetch();
+            }
+            else{
+                messages_find = messages.find({intervenant:val.value}).fetch();
+            }
+
             Session.set("messages",messages_find);
         }
     }
