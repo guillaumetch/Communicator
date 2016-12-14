@@ -12,20 +12,25 @@ Template.message.helpers
     {
         all_messages: function ()
         {
-            return messages.find().map
-            (
-                function (message, index, cursor) {
-
-                    if(Session.get("intervenant"))
-                    {
-                        console.log('session');
-                    }
-                    else{
-                        return {object: message.object, libelle: message.libelle, matiere: message.matiere, createAt: message.createAt, intervenant: message.intervenant};
-                    }
-
+            if(Session.get("messages"))
+            {
+                var messages_find = Session.get('messages');
+                for(var i=0;i<messages_find.length;i++)
+                {
+                    console.log('ok');
+                    messages_find[i].createAt = moment(messages_find[i].createAt).format('D/MM/Y');
                 }
-            );
+                delete Session.keys['messages'];
+                return messages_find;
+            }
+            else{
+                return messages.find().map
+                (
+                    function (message, index, cursor) {
+                        return {object: message.object, libelle: message.libelle, matiere: message.matiere, intervenant: message.intervenant,createAt: moment(message.createAt).format('D/MM/Y')};
+                    }
+                );
+            }
         }
     }
 );
@@ -52,11 +57,9 @@ Template.intervenant.events(
         'change':function(event, template)
         {
             var val = template.find('#select_intervenants');
-            console.log(val.value)
-            console.log(intervenants.findOne({intervenant:val.value}));
-            Session.set("intervenant",val.value);
-
-
+            var messages_find = messages.find({intervenant:val.value});
+            var messages_find = messages_find.fetch();
+            Session.set("messages",messages_find);
         }
     }
 )
