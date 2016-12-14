@@ -263,7 +263,16 @@ nav i {
     transition-duration: .5s;
 }
 
+.navigation i.active {
+    color: #008589;
+    transition-duration: .5s;
+}
+
 .navigation li:hover {
+    border-bottom-color: #008589;
+}
+
+.navigation li.active {
     border-bottom-color: #008589;
 }
 
